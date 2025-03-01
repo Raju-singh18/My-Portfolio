@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Raju Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body >
+    <!-- navigation menu -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1100" >
+                RAJU <span>SINGH</span>
+            </div>
+            
+        
+             <div class="links">
+              <div class="link" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="100"> <a href="#">Home</a></div>
+              <div class="link" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="200"> <a href="#">About</a></div>
+              <div class="link" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300"><a href="#">Technical-Skills</a></div>
+              <div class="link" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500"> <a href="#">Contact Me</a></div>
+            </div>
+         
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">TechnicalSkills</a>
+                <a href="#">Contact Me</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()" ></i>
+            </div>     
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in" data-aos-duration="2500">
+                <img src="image1.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1100" data-aos-delay="700">Hey I'm <span>Raju Singh</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="1100">  <span class="typewriter-text">FRONTEND DEVELOPER</span></div>
+                <p data-aos="flip-up" data-aos-duration="1100" data-aos-delay="1100">Movivated Front-End Developer with skills in HTML, CSS, JavaScript and framework like Bootstrap. Passinate about building responsive, user-friendly web applications.</p>
+                <div class="social-links">
+                   
+                    <a href="#" data-aos="zoom-out" data-aos-duration="1100" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in-left" data-aos-duration="1100" data-aos-delay="1700">
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section -->
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1100"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left" data-aos="fade-right" data-aos-duration="1100" dat-aos-delay="100">
+                    <img src="image2.png" alt=""/>
+                </div>
+                <div class="right">
+                    <p class="about-text" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="200">I am <span>Raju Singh</span> and I am <span>Web Developer </span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis minus cupiditate libero vitae blanditiis doloremque quo officia laborum, ex, vero sapiente necessitatibus ipsam modi. Magnam dolor dolore reprehenderit sequi deserunt?</p>
+                    <div class="exp-area">
+                        <p class="exp" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
+                            Experience:
+                            <span>5 months</span>
+                        </p>
+
+                        <p class="exp">
+                            Speciality:
+                            <span>FRONTEND DEVELOPER</span>
+                        </p>
+                        <p class="exp" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">
+                            Address:
+                            <span>Kushinagar,India</span>
+                        </p>
+
+                        <p class="exp" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="600">
+                            Email:
+                            <span>rajusingh.mca26@gmail.com</span>
+                        </p>
+
+                        <p class="exp" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="700">
+                            Phone:
+                            <span>+91 7317781678</span>
+                        </p>
+                    </div>
+                    <div class="button" data-aos="zoom-out" data-aos-duration="1100" data-aos-delay="900">
+                        <button>View Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+    </section> 
+      <!-- technical Skills -->
+    <section class="tech" id="tech">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1100"><span>My Technical Skills</span></div>
+            <div class="boxes">
+                <div class="box" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="100">
+                    <div class="icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="topic">HTML</div>
+                    <p>is the standard language for web pages.</p>
+                </div>
+                <div class="box">
+                    <div class="icon"data-aos="fade-up" data-aos-duration="1100" data-aos-delay="100">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div class="topic">CSS</div>
+                    <p>styles HTML elements for visually appealing layouts.</p>
+                </div>
+                <div class="box" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="100">
+                    <div class="icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div class="topic">JavaScript</div> 
+                    <p>enables interactive and dynamic web functinality</p>
+                </div>
+                <div class="box" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
+                    <div class="icon">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <div class="topic">JAVA</div>
+                    <p>is Object Oriented Programming Language.</p>
+                </div>
+                <div class="box" data-aos="fade-down" data-aos-duration="1100" data-aos-delay="300">
+                    <div class="icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="topic">MySQL</div>
+                    <p>ia a popular relational database management system.</p>
+                </div>
+                <div class="box" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="400">
+                    <div class="icon">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <div class="topic">MS Excel</div>
+                    <p>is a powerful spreadsheet data tool.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+       <!-- contact ME -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1100"><span>Contact Me</span></div>
+            <div class="text">
+                <div class="topic" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="100">Have Any Project</div>
+                <p data-aos="fade-right" data-aos-duration="1100" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, repellendus! </p> 
+
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <label for="Name" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
+
+                    <label for="email" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="400">Email:</label>
+                    <input type="email" id="email" placeholder="Your email" required data-aos="fade-up" data-aos-duration="1100" data-aos-delay="400">
+
+                    <label for="Phone" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">Phone Number:</label>
+                    <input type="tel" id="phone" placeholder="Your phone number" required data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">
+
+                    <label for="message" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="600">Message:</label>
+                    <textarea name="message" id="message" rows="5" placeholder="Your message" required data-aos="fade-up" data-aos-duration="1100" data-aos-delay="600"></textarea>
+
+                    <button type="submit" class="contact-btn" data-aos="zoom-in-up" data-aos-duration="1100" data-aos-delay="700">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+       <!-- footer section start -->
+       <footer>
+          <div class="text">
+            <span>Created by <a href="#">rajusingh_18</a>|&#214 All Right Reserved</span>
+          </div>
+       </footer>
+       
+       <script src="script.js"></script>
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script>
+         AOS.init({Offset:0});
+       </script>
+
+</body>
+</html> 
