@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.sidebar {
+  overflow: hidden;
+}
+
+/* Custom Styles for Professional Portfolio */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Navbar Transitions */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 193, 7, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Card Hover Effects */
+.card {
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Button Animations */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Skills Progress Bars */
+.progress {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  transition: width 1s ease-in-out;
+}
+
+/* Timeline Styles */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 3px solid #667eea;
+  border-radius: 50%;
+}
+
+/* Loading Animations */
+.spinner-border {
+  animation: spinner-border 0.75s linear infinite;
+}
+
+/* Social Media Icons */
+.social-links .btn {
+  transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+  transform: scale(1.1);
+}
+
+/* Admin Panel Styles */
+.admin-sidebar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Force gradient background on ALL elements */
+.admin-sidebar,
+.admin-sidebar *,
+.admin-sidebar *::before,
+.admin-sidebar *::after,
+.admin-sidebar .collapse,
+.admin-sidebar .collapse.show,
+.admin-sidebar .collapse.collapsing,
+.admin-sidebar .collapsing,
+.admin-sidebar div,
+.admin-sidebar .px-4,
+.admin-sidebar .pb-4,
+.admin-sidebar .p-4,
+.admin-sidebar .border-bottom,
+.admin-sidebar .flex-grow-1 {
+  background: transparent !important;
+}
+
+/* Ensure the main container always has the gradient */
+.admin-sidebar::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for Sidebar */
+.admin-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox scrollbar */
+.admin-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar > * {
+  background: transparent !important;
+}
+
+.admin-content {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.sidebar-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+}
+
+.sidebar-nav-link {
+  transition: all 0.3s ease;
+}
+
+.sidebar-header h4 {
+  font-size: 1.1rem;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* Collapsible Sidebar Sections - Force transparent backgrounds */
+.admin-sidebar .btn-link {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.admin-sidebar .btn-link:focus,
+.admin-sidebar .btn-link:active,
+.admin-sidebar .btn-link:hover {
+  box-shadow: none !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: none !important;
+}
+
+/* FORCE transparent background on ALL collapsible content */
+.admin-sidebar .collapse,
+.admin-sidebar .collapse.show,
+.admin-sidebar .collapse.collapsing,
+.admin-sidebar .collapsing {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Target ALL possible container elements */
+.admin-sidebar .collapse .px-4,
+.admin-sidebar .collapse .pb-4,
+.admin-sidebar .collapse .p-4,
+.admin-sidebar .collapse .row,
+.admin-sidebar .collapse .col-6,
+.admin-sidebar .collapse .col-4,
+.admin-sidebar .collapse .col-md-6,
+.admin-sidebar .collapse .nav,
+.admin-sidebar .collapse .nav-link,
+.admin-sidebar .collapse div {
+  background: transparent !important;
+}
+
+/* Override Bootstrap's default backgrounds */
+.admin-sidebar .row,
+.admin-sidebar .col,
+.admin-sidebar .col-6,
+.admin-sidebar .col-4,
+.admin-sidebar .col-md-6,
+.admin-sidebar [class*="col-"] {
+  background: transparent !important;
+}
+
+/* Fix for Bootstrap's collapse component */
+.admin-sidebar .collapse:not(.show) {
+  display: none !important;
+}
+
+.admin-sidebar .collapse.show {
+  display: block !important;
+}
+
+/* Animation improvements */
+.admin-sidebar .collapse.show {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Section Header Hover Effects */
+.admin-sidebar .btn-link:hover i.fa-chevron-up,
+.admin-sidebar .btn-link:hover i.fa-chevron-down {
+  transform: scale(1.1);
+}
+
+/* Smooth transitions for chevron icons */
+.admin-sidebar i.fa-chevron-up,
+.admin-sidebar i.fa-chevron-down {
+  transition: all 0.3s ease;
+}
+
+/* Exception for specific elements that SHOULD have background */
+.admin-sidebar .bg-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+.admin-sidebar .bg-white.bg-opacity-10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Maintain hover effects for navigation links */
+.admin-sidebar .sidebar-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+}
+
+/* Active navigation link styling */
+.admin-sidebar .nav-link.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* Force transparent background on all Bootstrap components in sidebar */
+.admin-sidebar .btn:not(.bg-warning):not(.btn-outline-warning) {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.admin-sidebar .btn-outline-warning {
+  background: transparent !important;
+  border-color: #ffc107 !important;
+  color: #ffc107 !important;
+}
+
+.admin-sidebar .btn-outline-warning:hover {
+  background: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* ULTIMATE BACKGROUND OVERRIDE - Force transparent on EVERYTHING */
+.admin-sidebar,
+.admin-sidebar > *,
+.admin-sidebar > * > *,
+.admin-sidebar > * > * > *,
+.admin-sidebar > * > * > * > *,
+.admin-sidebar .sidebar-header,
+.admin-sidebar .border-bottom,
+.admin-sidebar .flex-grow-1,
+.admin-sidebar .collapse,
+.admin-sidebar .collapse > *,
+.admin-sidebar .collapse > * > *,
+.admin-sidebar .px-4,
+.admin-sidebar .pb-4,
+.admin-sidebar .p-4,
+.admin-sidebar .p-3,
+.admin-sidebar .mt-3,
+.admin-sidebar .mb-2,
+.admin-sidebar .mb-3,
+.admin-sidebar .row,
+.admin-sidebar .col-6,
+.admin-sidebar .nav,
+.admin-sidebar .nav-link:not(.bg-warning),
+.admin-sidebar .dropdown,
+.admin-sidebar .dropdown-menu,
+.admin-sidebar .list-group,
+.admin-sidebar .list-group-item,
+.admin-sidebar .d-flex,
+.admin-sidebar .flex-column,
+.admin-sidebar .text-center,
+.admin-sidebar .border-top {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Smooth scrolling behavior */
+.admin-sidebar {
+  scroll-behavior: smooth;
+}
+
+/* Scroll fade effect at top and bottom */
+.admin-sidebar::after {
+  content: '';
+  position: sticky;
+  bottom: 0;
+  height: 20px;
+  background: linear-gradient(transparent, rgba(102, 126, 234, 0.3));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Additional fixes for sidebar background issues */
+.admin-sidebar .border-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.admin-sidebar .border-light {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.admin-sidebar .border-opacity-25 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure no white backgrounds leak through */
+.admin-sidebar,
+.admin-sidebar > div,
+.admin-sidebar .d-flex,
+.admin-sidebar .flex-column {
+  background: transparent !important;
+}
+
+/* Fix for any Bootstrap utility classes */
+.admin-sidebar .bg-transparent {
+  background: transparent !important;
+}
+
+/* Ensure proper spacing and layout */
+.admin-sidebar .collapse .nav-link {
+  margin-bottom: 2px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.admin-sidebar .collapse .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(3px);
+}
+
+/* Form Styles */
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Badge Styles */
+.badge {
+  font-weight: 500;
+}
+
+/* Alert Animations */
+.alert {
+  animation: slideInDown 0.3s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .bg-light {
+    background-color: #1a202c !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .btn,
+  .social-links {
+    display: none;
+  }
+  
+  .hero-section {
+    background: white !important;
+    color: black !important;
+  }
+}
